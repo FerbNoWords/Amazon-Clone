@@ -1,0 +1,5 @@
+1. sign-up window on ( header location - header accounts - header return orders )
+
+2. cart page
+
+3. sidebar

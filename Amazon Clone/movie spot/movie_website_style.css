@@ -1,0 +1,432 @@
+/* Mobile */
+@media (max-width:425px) {
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --deep-navy: #0B132B;
+        --dark-blue: #1C2541;
+        --teal: #3A506B;
+        --gold: #F4C95D;
+    }
+
+    body {
+        background-color: var(--gold);
+    }
+
+    header>nav {
+        background-color: var(--dark-blue);
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .topbar {
+        display: flex;
+
+    }
+
+    .logo {
+        font-size: 3.5vh;
+        color: var(--gold);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-right: auto;
+    }
+
+    .colapse>button {
+        background-color: var(--gold);
+        color: var(--teal);
+        margin-left: auto;
+        border: 1px solid var(--teal);
+        border-radius: 5pt;
+        align-items: center;
+        padding-top: 1pt;
+    }
+
+    svg {
+        height: 15px;
+    }
+
+    .search {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .search>input {
+        width: 100%;
+        padding: 3px 8px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border: none;
+        border-radius: 5px;
+    }
+
+
+    .search>input:focus {
+        outline: none;
+    }
+
+    .trailer {
+        display: none;
+    }
+
+    .movies>h3 {
+        margin-left: 5%;
+        font-size: 3.5vh;
+        color: var(--dark-blue);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px;
+    }
+
+    .movies>.category {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .movies>.category>.movie-card>img {
+        height: 50vw;
+        padding-left: 15px;
+    }
+}
+
+/* Tablet */
+@media (min-width:426px) and (max-width:768px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --deep-navy: #0B132B;
+        --dark-blue: #1C2541;
+        --teal: #3A506B;
+        --gold: #F4C95D;
+    }
+
+    body {
+        background-color: var(--gold);
+    }
+
+    header>nav {
+        background-color: var(--dark-blue);
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+        display: flex;
+    }
+
+    .colapse>button {
+        display: none;
+    }
+
+    .topbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 3.5vh;
+        color: var(--gold);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-right: auto;
+        width: 20vh;
+        align-items: center;
+    }
+
+    .navlinks {
+        display: flex;
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .navlinks>a {
+        align-items: center;
+        text-decoration: none;
+        font-size: 2.3vh;
+        font-weight: bold;
+        color: var(--gold);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .navlinks>a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .search {
+        width: 30vw;
+        padding: 5px 0;
+    }
+
+    .search>input {
+        width: 100%;
+        padding: 3px 8px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search>input:focus {
+        outline: none;
+    }
+
+    .trailer>video {
+        width: 100%;
+        height: 48vw;
+        object-fit: cover;
+    }
+
+    .trailer {
+        position: relative;
+    }
+
+    .details {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        overflow-y: hidden;
+    }
+
+    .details>.movie-icon>img {
+        width: 16%;
+    }
+
+    .details>.release {
+        color: aliceblue;
+        padding: 1vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+
+    .details>.describe {
+        width: 60%;
+        color: aliceblue;
+        padding: 1vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+
+    .details>.btn>button {
+        padding: 1vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 1.6vw;
+        margin-left: 1.5vw;
+        background-color: var(--dark-blue);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+    .movies>h3 {
+        margin-left: 5%;
+        font-size: 3.5vh;
+        color: var(--dark-blue);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px;
+    }
+
+    .movies>.category {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .movies>.category>.movie-card>img {
+        height: 30vw;
+        padding-left: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width:769px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --deep-navy: #0B132B;
+        --dark-blue: #1C2541;
+        --teal: #3A506B;
+        --gold: #F4C95D;
+    }
+
+    body {
+        background-color: var(--gold);
+    }
+
+    header>nav {
+        background-color: var(--dark-blue);
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+        display: flex;
+    }
+
+    .colapse>button {
+        display: none;
+    }
+
+    .topbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 3.5vh;
+        color: var(--gold);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-right: auto;
+        width: 20vh;
+        align-items: center;
+    }
+
+    .navlinks {
+        display: flex;
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .navlinks>a {
+        align-items: center;
+        text-decoration: none;
+        font-size: 2.5vh;
+        font-weight: bold;
+        color: var(--gold);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .navlinks>a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .search {
+        width: 30vw;
+        padding: 5px 0;
+    }
+
+    .search>input {
+        width: 100%;
+        height: 100%;
+        padding: 3px 8px;
+        font-size: 1.5vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .search>input:focus {
+        outline: none;
+    }
+
+    .trailer>video {
+        width: 100%;
+        height: 48vw;
+        object-fit: cover;
+    }
+
+    .trailer {
+        position: relative;
+    }
+
+    .details {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        overflow-y: hidden;
+    }
+
+    .details>.movie-icon>img {
+        width: 16%;
+    }
+
+    .details>.release {
+        color: aliceblue;
+        padding: 1vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 2vw;
+    }
+
+    .details>.describe {
+        width: 60%;
+        color: aliceblue;
+        padding: 1vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+
+    .details>.btn>button {
+        padding: 1vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        margin-left: 1.5vw;
+        font-size: 1.4vw;
+        background-color: var(--dark-blue);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+    .movies>h3 {
+        margin-left: 5%;
+        font-size: 3.5vh;
+        color: var(--dark-blue);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px;
+    }
+
+    .movies>.category {
+        display: flex;
+        overflow-x: scroll;
+    }
+    
+
+    .movies>.category>.movie-card>img {
+        height: 20vw;
+        padding-left: 15px;
+    }
+
+    /* Scrollbar width */
+    ::-webkit-scrollbar {
+        width: 1px;
+        height: 4px;
+        padding-left: 10px;
+    }
+
+    /* Scrollbar track */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 1px;
+
+    }
+
+    /* On hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #999;
+    }
+}
