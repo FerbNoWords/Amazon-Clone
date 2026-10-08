@@ -61,10 +61,11 @@ body {
 
 .delivery-details {
     height: fit-content;
-    width: 60%;
+    width: 70%;
     box-sizing: border-box;
     margin: 20px;
-    background-color: white;padding: 20px;
+    background-color: white;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -114,10 +115,10 @@ font-size: 2vw;
 }
 
 .order-summary {
-    width: 30%;
+    width: 20%;
     height: fit-content;
     background-color: white;
-    margin: 15pt;
+    margin: 15pt 0;
     display: flex;
     flex-wrap: wrap;
 }

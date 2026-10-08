@@ -3,3 +3,12 @@
 2. cart page
 
 3. sidebar
+
+// ================================
+product page
+1. bank offers ,cashback 
+2. get gems on this items
+3. delivery features (10 days return, COD , free delivery, top brands, 
+                        amazon delivered, secrued transaction)
+4. customers reviews 30%
+5. customers say 70%

@@ -264,7 +264,6 @@ mycart.append(cartLabel);
 header.append(mycart);
 
 // Below header navigation links
-
 const navbar = document.querySelector("nav");
 navbar.classList.add("nav");
 
@@ -279,6 +278,12 @@ navLinks.map((l) => {
   link.textContent = l;
   link.classList.add("nav-link");
   navArea.append(link);
+
+  link.addEventListener("click", () => {
+    if (l == "Movie Spot") {
+      window.location.href = "./movie spot/movie_website.html";
+    }
+  });
 })
 
 // ==================================================================================
@@ -352,11 +357,15 @@ if (getCart().length === 0) {
                           <div id="gift"><input type="checkbox">This will be a gift.</div>
                           <div id="adjustQty">
                           <div id="decQty">-</div>     <div id="Qty">${product.quantity}</div>    <div id="incQty">+</div> 
-                          </div>
-                          <div id="removeItem">Delete</div>`;
-    itmSmry2.classList.add("itmSmry2");
-    itemSummary.append(itmSmry2);
+                          </div>`
 
+    itmSmry2.classList.add("itmSmry2");
+
+    const rmItem = document.createElement("div");
+    rmItem.classList.add("removeItem");
+    rmItem.textContent = "Delete";
+    itmSmry2.append(rmItem);
+    itemSummary.append(itmSmry2);
     const itmSmry3 = document.createElement("div");
 
     const discountedPrice = product.price - (product.price * product.discount / 100);
@@ -369,7 +378,13 @@ if (getCart().length === 0) {
     const decQty = document.getElementById("decQty");
     const Qty = document.getElementById("Qty");
     const incQty = document.getElementById("incQty");
-    const rmItem = document.getElementById("removeItem");
+
+    rmItem.addEventListener("click", () => {
+      let cart = getCart();
+      cart = cart.filter(item => item.productName !== product.productName);
+      localStorage.setItem("customerCart", JSON.stringify(cart));
+      location.reload();
+    });
 
     prodImage.addEventListener("click", () => {
       localStorage.setItem("selectedProduct", JSON.stringify(product));
@@ -385,26 +400,29 @@ if (getCart().length === 0) {
     // });
   });
 
-  let totalAmount = cart.reduce((acl,prod) => {
+  let totalAmount = cart.reduce((acl, prod) => {
     let discountedPrice = prod.price - (prod.price * prod.discount / 100);
     return acl += discountedPrice;
   }, 0);
 
   const purchaseSummary = document.querySelector(".purchase-summary");
   purchaseSummary.classList.add("purchase-summary");
+  if(cart.length !== 0) {
+    purchaseSummary.classList.toggle("show-ps");
+  }
 
   const freeDelLabel = document.createElement("div");
   freeDelLabel.innerHTML = `<img src="greenTick.png"><label>Your order is eligible for FREE Delivery.</label>`;
   freeDelLabel.classList.add("freeDelLabel");
   purchaseSummary.append(freeDelLabel)
-  
+
   const freeDelLabel2 = document.createElement("div");
   freeDelLabel2.textContent = "Choose FREE Delivery option at checkout";
   freeDelLabel2.classList.add("freeDelLabel2");
   purchaseSummary.append(freeDelLabel2)
- 
 
-  if(totalAmount<1000) {
+
+  if (totalAmount < 1000) {
     freeDelLabel.style.display = "none";
     freeDelLabel2.style.display = "none";
   }
@@ -549,5 +567,5 @@ copyRt.textContent = "© 1996-2026, Amazon.com, Inc. or its affiliates";
 footerPart2.append(copyRt);
 
 window.addEventListener("pageshow", () => {
-    updateCartCount(itemCount);
+  updateCartCount(itemCount);
 });
