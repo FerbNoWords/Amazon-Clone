@@ -552,7 +552,7 @@ body {
 
 }
 
-.itmSmry2>#removeItem {
+.itmSmry2>.removeItem {
     width: fit-content;
     height: 23pt;
     display: flex;
@@ -567,7 +567,7 @@ body {
     font-size: 1vw;
     cursor: pointer;
 }
-.itmSmry2>#removeItem:hover {
+.itmSmry2>.removeItem:hover {
     text-decoration: underline;
 }
 .itmSmry3{
@@ -604,15 +604,16 @@ body {
     height: fit-content;
     margin: 2% 2% 0 0;
     background-color: white;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    display: flex;
+    visibility: hidden;
 }
 
-.hide-ps {
-    display: none;
+.show-ps {
+    visibility: visible;
 }
 
 .freeDelLabel {

@@ -89,7 +89,7 @@ placeOrder.addEventListener("click", () => {
         <div class="aft-ord">
         <img class="aft-gtk" src="greenTick.png">
         <label>Order Placed, Thank You :)</label>
-        </div>
+        </div> 
     `;
 });
 
